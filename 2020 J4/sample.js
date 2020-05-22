@@ -7,6 +7,7 @@ window.onload = function () {
 
 function submit(e) {
 
+    //Getting the input values from the form
     var t = document.getElementById("text").value;
     var s = document.getElementById("string").value;
 
@@ -15,6 +16,7 @@ function submit(e) {
     return false;
 }
 
+//Function checks if the cyclic strings are present in the text and writes the output
 function cyclic(t, s) {
     var t = t.toString();
     var s = s.toString();
@@ -31,10 +33,12 @@ function cyclic(t, s) {
         }
         var s = A.join("");
         if (t.includes(s)) {
+            //Writing output into the div tag
             document.getElementById("output").innerHTML = "yes";
             return;
         }
     }
+    //Writing output into the div tag
     document.getElementById("output").innerHTML = "no";
 
 }
